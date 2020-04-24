@@ -17,11 +17,6 @@ namespace frmClient
             Connect();
         }
 
-        private void btn_Send_Click(object sender, EventArgs e)
-        {
-            Send();
-        }
-
         private IPEndPoint IP;
         private Socket client;
 
@@ -116,6 +111,11 @@ namespace frmClient
                 Closee();
             }
             catch { }
+        }
+
+        private void btn_Send_Click_1(object sender, EventArgs e)
+        {
+            Send();
         }
     }
 }

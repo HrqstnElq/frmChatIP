@@ -6,9 +6,7 @@ using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using System.Windows.Forms;
-/// <summary>
-/// Server is here
-/// </summary>
+
 namespace frmServer
 {
     public partial class Seerver : Form
@@ -22,6 +20,12 @@ namespace frmServer
 
         void btn_Send_Click(object sender, EventArgs e)
         {
+            foreach(var item in listClient)
+            {
+                Send(item);
+            }
+            addMessage(txt_Message.Text);
+            txt_Message.Text = "";
         }
 
         IPEndPoint IP;
@@ -58,6 +62,7 @@ namespace frmServer
                         }
                     }
                 }
+                //neu serveer gap loi tien hanh tai tao lai vong lap
                 catch
                 {
                     goto RESET;                   
@@ -69,6 +74,7 @@ namespace frmServer
 
         void Closee()
         {
+            server.Close();
         }
 
         void Receive(object client)
@@ -84,6 +90,13 @@ namespace frmServer
                         cli.Receive(data);
                         string test = (string)Deserialize(data);
                         addMessage(test);
+                        foreach (var temp in listClient)
+                        {
+                            if (temp != client)
+                            {
+                                temp.Send(data);
+                            }
+                        }
                     }                   
                 }
             }
@@ -94,8 +107,13 @@ namespace frmServer
             }
         }
 
-        void Send()
+        void Send(Socket client)
         {
+            if(txt_Message.Text != "")
+            {
+                byte[] data = Serialize(txt_Message.Text);
+                client.Send(data);               
+            }
         }
 
         byte[] Serialize(object obj)

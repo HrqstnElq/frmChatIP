@@ -28,42 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rtb_history = new System.Windows.Forms.RichTextBox();
-            this.txt_Message = new System.Windows.Forms.TextBox();
             this.btn_Send = new System.Windows.Forms.Button();
+            this.txt_Message = new System.Windows.Forms.TextBox();
+            this.rtb_history = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
-            // 
-            // rtb_history
-            // 
-            this.rtb_history.Location = new System.Drawing.Point(3, 4);
-            this.rtb_history.Name = "rtb_history";
-            this.rtb_history.Size = new System.Drawing.Size(703, 346);
-            this.rtb_history.TabIndex = 0;
-            this.rtb_history.Text = "";
-            // 
-            // txt_Message
-            // 
-            this.txt_Message.Location = new System.Drawing.Point(3, 355);
-            this.txt_Message.Multiline = true;
-            this.txt_Message.Name = "txt_Message";
-            this.txt_Message.Size = new System.Drawing.Size(546, 39);
-            this.txt_Message.TabIndex = 1;
             // 
             // btn_Send
             // 
-            this.btn_Send.Location = new System.Drawing.Point(555, 356);
+            this.btn_Send.Location = new System.Drawing.Point(221, 359);
             this.btn_Send.Name = "btn_Send";
-            this.btn_Send.Size = new System.Drawing.Size(151, 38);
-            this.btn_Send.TabIndex = 2;
+            this.btn_Send.Size = new System.Drawing.Size(74, 38);
+            this.btn_Send.TabIndex = 8;
             this.btn_Send.Text = "Send";
             this.btn_Send.UseVisualStyleBackColor = true;
-            this.btn_Send.Click += new System.EventHandler(this.btn_Send_Click);
+            this.btn_Send.Click += new System.EventHandler(this.btn_Send_Click_1);
+            // 
+            // txt_Message
+            // 
+            this.txt_Message.Location = new System.Drawing.Point(5, 359);
+            this.txt_Message.Multiline = true;
+            this.txt_Message.Name = "txt_Message";
+            this.txt_Message.Size = new System.Drawing.Size(201, 38);
+            this.txt_Message.TabIndex = 7;
+            // 
+            // rtb_history
+            // 
+            this.rtb_history.Location = new System.Drawing.Point(5, 7);
+            this.rtb_history.Name = "rtb_history";
+            this.rtb_history.ReadOnly = true;
+            this.rtb_history.Size = new System.Drawing.Size(290, 346);
+            this.rtb_history.TabIndex = 6;
+            this.rtb_history.Text = "";
             // 
             // Client
             // 
+            this.AcceptButton = this.btn_Send;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 403);
+            this.ClientSize = new System.Drawing.Size(303, 402);
             this.Controls.Add(this.btn_Send);
             this.Controls.Add(this.txt_Message);
             this.Controls.Add(this.rtb_history);
@@ -77,9 +79,9 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox rtb_history;
-        private System.Windows.Forms.TextBox txt_Message;
         private System.Windows.Forms.Button btn_Send;
+        private System.Windows.Forms.TextBox txt_Message;
+        private System.Windows.Forms.RichTextBox rtb_history;
     }
 }
 

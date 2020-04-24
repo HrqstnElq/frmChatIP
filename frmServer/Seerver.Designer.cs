@@ -35,9 +35,9 @@
             // 
             // btn_Send
             // 
-            this.btn_Send.Location = new System.Drawing.Point(555, 355);
+            this.btn_Send.Location = new System.Drawing.Point(219, 355);
             this.btn_Send.Name = "btn_Send";
-            this.btn_Send.Size = new System.Drawing.Size(151, 38);
+            this.btn_Send.Size = new System.Drawing.Size(74, 38);
             this.btn_Send.TabIndex = 5;
             this.btn_Send.Text = "Send";
             this.btn_Send.UseVisualStyleBackColor = true;
@@ -48,22 +48,24 @@
             this.txt_Message.Location = new System.Drawing.Point(3, 355);
             this.txt_Message.Multiline = true;
             this.txt_Message.Name = "txt_Message";
-            this.txt_Message.Size = new System.Drawing.Size(546, 38);
+            this.txt_Message.Size = new System.Drawing.Size(201, 38);
             this.txt_Message.TabIndex = 4;
             // 
             // rtb_history
             // 
             this.rtb_history.Location = new System.Drawing.Point(3, 3);
             this.rtb_history.Name = "rtb_history";
-            this.rtb_history.Size = new System.Drawing.Size(703, 346);
+            this.rtb_history.ReadOnly = true;
+            this.rtb_history.Size = new System.Drawing.Size(290, 346);
             this.rtb_history.TabIndex = 3;
             this.rtb_history.Text = "";
             // 
             // Seerver
             // 
+            this.AcceptButton = this.btn_Send;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 402);
+            this.ClientSize = new System.Drawing.Size(300, 401);
             this.Controls.Add(this.btn_Send);
             this.Controls.Add(this.txt_Message);
             this.Controls.Add(this.rtb_history);
