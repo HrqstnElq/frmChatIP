@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using System.Windows.Forms;
 /// <summary>
-/// Server
+/// Server is here
 /// </summary>
 namespace frmServer
 {
